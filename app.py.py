@@ -1313,7 +1313,14 @@ Educational use only — synthetic data, not for real-world forecasting.
         st.text_area(
             "Write 2–4 sentences: What pattern do you see? "
             "What might explain it? What can you NOT conclude?",
-            height=140,
+            value="""This histogram shows the distribution of annual visitor numbers 
+across all 120 observations. The shape is roughly bell-shaped with a slight 
+right skew, peaking around 54,000–59,000 visitors. Most observations fall 
+between 40,000 and 70,000, while extreme values (below 25,000 or above 90,000) 
+are rare. However, this chart shows only the distribution of one variable — 
+it cannot explain what causes higher or lower visitor numbers, and it does 
+not prove causation between any features and tourism activity.""",
+            height=180
         )
 
     # ------------------------------------------------------------------------
