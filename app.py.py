@@ -1515,21 +1515,25 @@ Write down:
         st.subheader("Main findings")
         st.text_area(
             "Write your main findings here.",
+            value=st.session_state.get("main_findings",""),
             height=150,
+            key="main_findings",
         )
 
         st.subheader("Model interpretation")
         st.text_area(
-            "Explain what the evaluation metrics mean in the context "
-            "of your problem.",
+            "Explain what the evaluation metrics mean in the context of your problem.",
+            value=st.session_state.get("model_interpretation", ""),
             height=150,
+            key="model_interpretation",
         )
 
         st.subheader("Limitations")
         st.text_area(
             "Document data, method and interpretation limitations.",
-            value=KNOWN_LIMITATIONS,
+            value=st.session_state.get("limitations", KNOWN_LIMITATIONS),
             height=150,
+            key="limitations",
         )
 
         st.subheader("Responsible AI / ML questions")
