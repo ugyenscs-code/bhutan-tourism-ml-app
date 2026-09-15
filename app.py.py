@@ -1535,8 +1535,18 @@ Educational use only — synthetic data, not for real-world forecasting.
         st.subheader("Main findings")
         st.text_area(
             "Write your main findings here.",
-            value=st.session_state.get("main_findings",""),
-            height=150,
+            value="""The analysis revealed several key findings. First, tourism activity 
+in Bhutan is strongly influenced by a combination of promotional spending, 
+social media presence, and destination attractiveness — with promotion budget 
+and social media mentions showing the strongest positive relationships with 
+annual visitors. Second, the dataset contains a balanced distribution of 
+visitors across regions, with most observations ranging between 40,000 and 
+70,000 annual visitors. Third, the machine learning model achieved an R² of 
+0.684, explaining about 68.4% of the variance in visitor numbers, with an MAE 
+of 5,905 visitors. Fourth, the presence of 6 missing values (in avg_hotel_price 
+and social_media_mentions) required careful imputation using median and mode 
+strategies to preserve data integrity.""",
+            height=200,
             key="main_findings",
         )
 
@@ -1575,23 +1585,7 @@ workflow, not as a real tourism forecast.""",
             height=200,
         )
 
-        st.subheader("Limitations")
-        st.text_area(
-            "Document data, method and interpretation limitations.",
-            value="""This project has several important limitations. Data limitations: 
-the dataset contains only 120 synthetic observations with 6 missing values, 
-which is too small for reliable real-world forecasting. The data is not real
-Bhutan tourism data. Method limitations: the train-test split does not capture 
-temporal patterns or seasonality. Ridge Regression assumes linear relationships, 
-which may oversimplify complex tourism dynamics. Interpretation limitations: 
-correlation does not imply causation — while promotion budget correlates with 
-visitor numbers, we cannot conclude that increasing budget causes more visitors. 
-Ethical limitations: this model should not be used to make real decisions about 
-tourism investment, resource allocation, or policy without additional real-world 
-data, expert input, and human oversight.""",
-            height=200,
-        )
-
+        
         st.subheader("Responsible AI / ML questions")
         st.markdown(
             """
