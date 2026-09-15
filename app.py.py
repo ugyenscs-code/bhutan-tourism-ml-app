@@ -1545,43 +1545,39 @@ visitors across regions, with most observations ranging between 40,000 and
 0.684, explaining about 68.4% of the variance in visitor numbers, with an MAE 
 of 5,905 visitors. Fourth, the presence of 6 missing values (in avg_hotel_price 
 and social_media_mentions) required careful imputation using median and mode 
-strategies to preserve data integrity.""",
+strategies to preserve data integrity. Overall, the findings suggest that tourism in 
+Bhutan is predictable to a moderate degree using regional, promotional, and accessbility 
+features.""",
             height=200,
-            key="main_findings",
+            
         )
 
         st.subheader("Model interpretation")
         st.text_area(
             "Explain what the evaluation metrics mean in the context of your problem.",
-            value="""The analysis revealed several key findings. First, tourism activity 
-in Bhutan is strongly influenced by a combination of promotional spending, 
-social media presence, and destination attractiveness — with promotion budget 
-and social media mentions showing the strongest positive relationships with 
-annual visitors. Second, the dataset contains a balanced distribution of 
-visitors across regions, with most observations ranging between 40,000 and 
-70,000 annual visitors. Third, the machine learning model achieved an R² of 0.684, explaining about 68.4% of the variance in visitor numbers, with an MAE 
-of 5,905 visitors. Fourth, the presence of 6 missing values (in avg_hotel_price 
-and social_media_mentions) required careful imputation using median and mode 
-strategies to preserve data integrity. Overall, the findings suggest that 
-tourism to Bhutan is predictable to a moderate degree using regional, 
-promotional, and accessibility features.""",
+            value="""The model achieved an MAE of 5,905 visitors, an RMSE of 7,143 visitors, and
+            an R² of 0.684. This means predictions were off by roughly 5,900 visitors on
+            average, and the model explained about 68% of the variation in annual
+            visitor numbers. The RMSE is higher than the MAE, suggesting some larger
+            prediction errors occurred. An R² of 0.684 is a moderate result — the model
+            captures most patterns but leaves about 32% of variance unexplained, likely
+            due to missing factors like seasonality, policy changes, or global events.
+            Given the small synthetic dataset (120 rows), this model is best viewed as a
+            teaching demonstration rather than a real forecasting tool.""",
             height=200,
         )
 
         st.subheader("Limitations")
         st.text_area(
             "Document data, method and interpretation limitations.",
-            value="""The Ridge Regression model achieved a Mean Absolute Error (MAE) 
-of 5,905 visitors, meaning predictions were off by about 5,900 visitors on 
-average. The Root Mean Squared Error (RMSE) was 7,143 visitors, higher than the 
-MAE, indicating some larger prediction errors occurred. The R² value of 0.684 
-shows the model explained approximately 68.4% of the variance in annual visitor 
-numbers. This is a moderate-to-good result for a small synthetic dataset — the 
-model captures the main patterns but leaves about 31.6% of variance unexplained,
-likely due to missing factors such as seasonality, visa policy, exchange rates, 
-or global events. Because the dataset contains only 120 synthetic observations, 
-these results should be interpreted as a teaching demonstration of the ML 
-workflow, not as a real tourism forecast.""", 
+            value="""This project has several important limitations. The dataset contains only 120
+            synthetic observations and is not real Bhutan tourism data, so findings
+            cannot inform real policy decisions. The train-test split does not capture
+            seasonality or temporal trends, and Ridge Regression assumes linear
+            relationships that may oversimplify tourism dynamics. Correlation does not
+            imply causation, and missing external factors (weather, visa policy, global
+            events) are not captured. Results lack external validation and should not be
+            used for real investment or policy decisions without expert oversight.""", 
             height=200,
         )
 
