@@ -47,3 +47,42 @@ infrastructure data, weather data, and policy changes.
 ### 5. Who is affected by incorrect predictions?
 Tourism businesses, local communities, government agencies, 
 the environment, and tourists themselves.
+
+## Data Source
+
+### Dataset Name
+Bhutan Tourism Built-in Example Dataset (Single-File ML Template)
+
+### Publisher / Owner
+Educational template created for teaching purposes
+(provided by the course instructor)
+
+### URL
+No external URL — the dataset is generated programmatically 
+inside the app using NumPy's random number generator with a fixed seed.
+
+### Date Accessed
+[Insert the date you accessed/submitted — e.g., 15 September 2026]
+
+### Unit of Analysis
+One destination region in Bhutan per observation.
+Each row represents tourism activity for a specific region 
+(North, South, East, West) in a given year.
+
+### Time Period
+Annual data — 120 observations across regions.
+
+### Important Variable Definitions
+- **region**: Destination region in Bhutan (North, South, East, West)
+- **promotion_budget**: Marketing/promotion budget for the region (USD)
+- **avg_hotel_price**: Average hotel price per night (USD)
+- **attraction_score**: Attraction quality score (1–5 scale)
+- **accessibility_score**: Accessibility/transport score (1–5 scale)
+- **social_media_mentions**: Number of social media mentions
+- **annual_visitors**: Total annual visitors (target variable)
+
+### Licensing or Reuse Conditions
+Educational use only — this dataset is synthetic and 
+not to be used for real-world tourism forecasting.
+
+
