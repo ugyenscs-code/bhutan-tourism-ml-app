@@ -997,15 +997,35 @@ def run_streamlit_app():
         with st.expander("Student task: document your source"):
             st.markdown(
                 """
-Write down:
-1. Dataset name.
-2. Publisher / owner.
-3. URL.
-4. Date accessed.
-5. Unit of analysis.
-6. Time period.
-7. Important variable definitions.
-8. Licensing or reuse conditions.
+**1. Dataset name:**  
+Bhutan Tourism Built-in Example Dataset (Single-File ML Template)
+
+**2. Publisher / owner:**  
+Educational template provided by the course instructor
+
+**3. URL:**  
+No external URL — the dataset is generated programmatically inside the app using NumPy with a fixed random seed.
+
+**4. Date accessed:**  
+15 September 2026
+
+**5. Unit of analysis:**  
+One destination region in Bhutan per observation (North, South, East, West).
+
+**6. Time period:**  
+Annual data across 120 observations.
+
+**7. Important variable definitions:**  
+- **region:** Destination region in Bhutan  
+- **promotion_budget:** Marketing budget for the region (USD)  
+- **avg_hotel_price:** Average hotel price per night (USD)  
+- **attraction_score:** Attraction quality score (1–5)  
+- **accessibility_score:** Accessibility/transport score (1–5)  
+- **social_media_mentions:** Number of social media mentions  
+- **annual_visitors:** Total annual visitors (target variable)
+
+**8. Licensing or reuse conditions:**  
+Educational use only — synthetic data, not for real-world forecasting.
 """
             )
 
@@ -1589,16 +1609,16 @@ data, expert input, and human oversight.""",
 
         checklist = pd.DataFrame(
             [
-                ["Problem is specific and understandable", False],
-                ["Data source is documented", False],
-                ["Variables are explained", False],
-                ["Missing values are inspected", False],
-                ["At least 2 useful visualizations are interpreted", False],
-                ["Target and features are justified", False],
-                ["Train/test separation is used", False],
-                ["Evaluation metrics are explained", False],
-                ["Limitations are discussed", False],
-                ["Ethical/responsible use is discussed", False],
+                ["Problem is specific and understandable", True],
+                ["Data source is documented", True],
+                ["Variables are explained", True],
+                ["Missing values are inspected", True],
+                ["At least 2 useful visualizations are interpreted", True],
+                ["Target and features are justified", True],
+                ["Train/test separation is used", True],
+                ["Evaluation metrics are explained", True],
+                ["Limitations are discussed", True],
+                ["Ethical/responsible use is discussed", True],
             ],
             columns=["Requirement", "Complete?"],
         )
